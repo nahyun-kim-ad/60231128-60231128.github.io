@@ -1,2067 +1,674 @@
-<html style="overflow: hidden">
-  <head>
-    <!-- JQuery Load -->
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- CSS Load -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-
-    <!-- script.js Load -->
-    <script src="js/script.js"></script>
-
-    <!-- Adobe Fonts 임베드 코드 -->
-    <link rel="stylesheet" href="https://use.typekit.net/keo8upg.css" />
-  </head>
-  <body>
-    <!-- 음악 -->
-    <audio
-      class="music"
-      src="./Another Day Of Sun.mp3"
-      allow="autoplay"
-      autoplay="true"
-      id="audio"
-      style="opacity: 1"
-    ></audio>
-
-    <div class="container">
-      <div class="background">
-        <div class="moon-glow"></div>
-        <img src="./moon.png" alt="달 이미지" class="moon" />
-      </div>
-
-      <div class="text-container" style="left: -16px">
-        <p class="typewriter-text">Here's to the fools who dream.</p>
-        <br />
-        <h1 class="typewriter-text">LALA LAND</h1>
-        <br />
-        <p class="typewriter-text">
-          "City of Stars, are you shining just for me?"
-        </p>
-        <br />
-        <p class="typewriter-text">- Mia Dolan, from La La Land</p>
-      </div>
-
-      <div class="silhouette-container">
-        <img
-          src="dancing silhouette (2).png"
-          class="dancing-silhouette"
-          alt="실루엣 2"
-        />
-        <img
-          src="dancing silhouette (3).png"
-          class="dancing-silhouette"
-          alt="실루엣 3"
-        />
-        <img
-          src="dancing silhouette (4).png"
-          class="dancing-silhouette"
-          alt="실루엣 4"
-        />
-        <img
-          src="dancing silhouette (5).png"
-          class="dancing-silhouette"
-          alt="실루엣 5"
-        />
-
-        <img
-          src="dancing silhouette (7).png"
-          class="dancing-silhouette"
-          alt="실루엣 7"
-        />
-        <img
-          src="dancing silhouette (8).png"
-          class="dancing-silhouette"
-          alt="실루엣 8"
-        />
-        <img
-          src="dancing silhouette (9).png"
-          class="dancing-silhouette"
-          alt="실루엣 9"
-        />
-        <img
-          src="dancing silhouette (10).png"
-          class="dancing-silhouette"
-          alt="실루엣 10"
-        />
-        <img
-          src="dancing silhouette (11).png"
-          class="dancing-silhouette"
-          alt="실루엣 11"
-        />
-
-        <img
-          src="dancing silhouette (13).png"
-          class="dancing-silhouette"
-          alt="실루엣 13"
-        />
-        <img
-          src="dancing silhouette (14).png"
-          class="dancing-silhouette"
-          alt="실루엣 14"
-        />
-        <img
-          src="dancing silhouette (15).png"
-          class="dancing-silhouette"
-          alt="실루엣 15"
-        />
-      </div>
-
-      <!-- 땅 -->
-      <!-- 페이지 바닥에 ground 이미지 추가 -->
-      <img src="ground1.png" alt="땅 이미지" class="ground-image" />
-
-      <!-- 전구 -->
-      <div class="bulb1-container">
-        <!-- 첫 번째 전구 세트 -->
-        <img src="./bulb1.png" alt="전구 세트 1" class="bulb bulb1" />
-      </div>
-
-      <div class="bulb2-container">
-        <!-- 두 번째 전구 세트 -->
-        <img src="./bulb2.png" alt="전구 세트 2" class="bulb bulb2" />
-      </div>
-
-      <!--별자리 -->
-      <!-- 첫 번째 별자리 이미지 (왼쪽에 배치) -->
-      <div class="constellation-container left">
-        <img
-          src="Constellation1.png"
-          class="constellation-image"
-          style="top: 5px; left: 20%"
-        />
-      </div>
-
-      <!-- 두 번째 별자리 이미지 (오른쪽에 배치) -->
-      <div class="constellation-container right">
-        <img
-          src="Constellation2.png"
-          class="constellation-image"
-          style="top: 5px; left: 90%"
-        />
-      </div>
-
-      <!-- 새로운 별자리들 -->
-
-      <!-- 새로운 별자리들 -->
-      <div class="constellation-container third">
-        <img src="Constellation3.png" class="constellation-image" />
-      </div>
-      <div class="constellation-container fourth">
-        <img src="Constellation4.png" class="constellation-image" />
-      </div>
-
-      <!-- 음악 파이프 (saxophone) 이미지 -->
-      <img src="music.png" alt="음악 파이프 이미지" class="saxophone-image" />
-
-      <!-- 음표 이미지 (초기에는 숨김 상태) -->
-      <img src="musical.png" alt="음표 이미지" class="musical-notes" />
-
-      <!-- 건물 뒷배경 -->
-      <!-- 도시 실루엣 -->
-      <img src="city1.png" alt="도시 실루엣 이미지" class="city-image" />
-
-      <!-- 벤치 -->
-      <div class="bench-container">
-        <img src="./Bench.png" alt="벤치 이미지" class="bench" />
-      </div>
-      <!-- 고양이  -->
-      <div class="cat-container">
-        <img src="./cat.png" alt="고양이 이미지" class="cat" />
-      </div>
-
-      <div class="container">
-        <!-- 가로등 컨테이너 -->
-        <div class="streetlamp-container" style="bottom: -2%; left: -10%">
-          <img src="./Streetlamp.png" alt="가로등 이미지" class="streetlamp" />
-          <!-- 가로등에서 나오는 빛 -->
-          <div class="light"></div>
-          <!-- 바닥에 드리워지는 빛 -->
-          <div class="ground-light"></div>
-        </div>
-
-        <div class="streetlamp-container" style="bottom: -2%; left: 10%">
-          <img src="./Streetlamp.png" alt="가로등 이미지" class="streetlamp" />
-          <div class="light"></div>
-          <div class="ground-light"></div>
-        </div>
-
-        <div class="streetlamp-container" style="bottom: -2%; left: 55%">
-          <img src="./Streetlamp.png" alt="가로등 이미지" class="streetlamp" />
-          <div class="light"></div>
-          <div class="ground-light"></div>
-        </div>
-
-        <div class="streetlamp-container" style="bottom: -1%; left: 76%">
-          <img src="./Streetlamp.png" alt="가로등 이미지" class="streetlamp" />
-          <div class="light"></div>
-          <div class="ground-light"></div>
-        </div>
-      </div>
-
-      <!-- 불빛 효과를 위한 요소 -->
-
-      <div class="building-container" style="left: 0px">
-        <img
-          src="./Building silhouette1.png"
-          alt="건물 실루엣 이미지"
-          class="building-silhouette"
-        />
-      </div>
-
-      <div class="light-overlay">
-        <!-- 왼쪽 창문 -->
-        <!-- 작은 창문 -->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 150px; left: 10px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 138px; left: 10px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 126px; left: 10px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 105px; left: 15px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 92px; left: 15px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 79px; left: 15px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 105px; left: 3px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 92px; left: 3px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 79px; left: 3px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 67px; left: 15px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 67px; left: 3px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 55px; left: 15px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 55px; left: 3px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 43px; left: 15px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 43px; left: 3px"
-        />
-        <!--작은 창문-->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 92px; left: 38px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 92px; left: 48px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 92px; left: 58px"
-        />
-
-        <!--큰 창문-->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 68px; left: 48px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 56px; left: 48px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 44px; left: 48px"
-        />
-        <!--큰 창문-->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 128px; left: 99px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 128px; left: 82px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 114px; left: 99px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 114px; left: 82px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 100px; left: 99px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 100px; left: 82px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 86px; left: 99px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 86px; left: 82px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 72px; left: 99px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 72px; left: 82px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 58px; left: 99px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 58px; left: 82px"
-        />
-        <!--작은 창문-->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 90px; left: 140px"
-        />
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 90px; left: 151px"
-        />
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 80px; left: 140px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 80px; left: 151px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 70px; left: 140px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 70px; left: 151px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 70px; left: 162px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 60px; left: 140px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 60px; left: 151px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 60px; left: 162px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 50px; left: 140px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 50px; left: 151px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 50px; left: 162px"
-        />
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 118px; left: 168.5px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 132px; left: 168.5px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 146px; left: 168.5px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 102px; left: 176px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 90px; left: 176px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 102px; left: 160px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 78px; left: 176px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 78px; left: 192px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 78px; left: 208px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 66px; left: 178px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 66px; left: 194px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 66px; left: 210px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 54px; left: 179px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 54px; left: 195px"
-        />
-
-        <!--작은 창문-->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 90px; left: 229.5px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 78px; left: 229.5px"
-        />
-
-        <!--작은 창문-->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 93px; left: 263px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 93px; left: 251px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 80px; left: 263px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 80px; left: 251px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 67px; left: 263px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 67px; left: 251px"
-        />
-
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 58px; left: 232px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 58px; left: 251px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 46px; left: 213px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 46px; left: 232px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 46px; left: 251px"
-        />
-
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 125px; left: 252px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 125px; left: 268px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 110px; left: 288px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 95px; left: 288px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 80px; left: 288px"
-        />
-
-        <!--작은 창문-->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 83px; left: 314px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 83px; left: 323px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 73px; left: 314px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 73px; left: 323px"
-        />
-
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 50px; left: 300px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 50px; left: 317px"
-        />
-
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 110px; left: 370px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 110px; left: 350px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 97px; left: 370px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 97px; left: 350px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 84px; left: 370px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 84px; left: 350px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 71px; left: 370px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 58px; left: 350px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 58px; left: 370px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 45px; left: 350px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 45px; left: 370px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 71px; left: 350px"
-        />
-
-        <!--작은 창문-->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 95px; left: 398px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 95px; left: 410px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 95px; left: 422px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 83px; left: 398px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 83px; left: 410px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 83px; left: 422px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 71px; left: 398px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 71px; left: 410px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 71px; left: 422px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 59px; left: 398px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 59px; left: 410px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 59px; left: 422px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 59px; left: 434px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 47px; left: 398px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 47px; left: 410px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 47px; left: 422px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 47px; left: 434px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 47px; left: 446px"
-        />
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 84px; left: 448px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 72px; left: 448px"
-        />
-
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 92px; left: 487px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 92px; left: 505px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 80px; left: 487px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 80px; left: 505px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 68px; left: 487px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 68px; left: 505px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 68px; left: 523px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 56px; left: 487px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 56px; left: 505px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 56px; left: 523px"
-        />
-
-        <!-- 오른쪽 창문 -->
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 56px; right: 1px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 44px; right: 1px"
-        />
-
-        <!-- 작은 창문 -->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 150px; right: 45px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 150px; right: 32px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 150px; right: 19px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 138px; right: 45px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 138px; right: 32px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 138px; right: 19px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 126px; right: 45px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 126px; right: 32px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 126px; right: 19px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 114px; right: 45px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 114px; right: 32px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 114px; right: 19px"
-        />
-
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 87px; right: 36px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 75px; right: 36px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 75px; right: 53px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 63px; right: 36px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 63px; right: 53px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 51px; right: 36px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 51px; right: 53px"
-        />
-
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 110px; right: 76px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 110px; right: 94px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 110px; right: 112px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 110px; right: 130px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 96px; right: 76px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 96px; right: 94px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 96px; right: 112px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 96px; right: 130px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 82px; right: 76px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 82px; right: 94px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 82px; right: 112px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 82px; right: 130px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 70px; right: 94px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 70px; right: 112px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 70px; right: 130px"
-        />
-
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 91px; right: 150px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 78px; right: 150px"
-        />
-        <!-- 작은 창문 -->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 130px; right: 173px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 118px; right: 173px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 130px; right: 186px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 118px; right: 186px"
-        />
-
-        <!-- 작은 창문 -->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 85px; right: 220px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 85px; right: 232px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 73px; right: 220px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 73px; right: 232px"
-        />
-
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 92px; right: 257px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 92px; right: 276px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 80px; right: 257px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 80px; right: 276px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 68px; right: 257px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 68px; right: 276px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 56px; right: 257px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 56px; right: 276px"
-        />
-
-        <!-- 작은 창문 -->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 110px; right: 266.5px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 123px; right: 266.5px"
-        />
-
-        <!-- 작은 창문 -->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 120px; right: 310px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 120px; right: 323px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 106px; right: 305px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 106px; right: 317px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 106px; right: 329px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 92px; right: 305px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 92px; right: 317px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 92px; right: 329px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 78px; right: 305px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 78px; right: 317px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 78px; right: 329px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 64px; right: 305px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 64px; right: 317px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 64px; right: 329px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 50px; right: 305px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 50px; right: 317px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 50px; right: 329px"
-        />
-
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 54px; right: 361px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 54px; right: 374px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 44px; right: 361px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 44px; right: 374px"
-        />
-
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 85px; right: 357px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 73px; right: 357px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 85px; right: 374px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 73px; right: 374px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 85px; right: 392px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 73px; right: 392px"
-        />
-
-        <!-- 작은 창문 -->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 97px; right: 380px"
-        />
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 97px; right: 392px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 109px; right: 380px"
-        />
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 109px; right: 392px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 121px; right: 392px"
-        />
-
-        <!-- 작은 창문 -->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 97px; right: 412px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 97px; right: 426px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 85px; right: 412px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 85px; right: 426px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 73px; right: 412px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 73px; right: 426px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 61px; right: 412px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 61px; right: 426px"
-        />
-
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 124px; right: 410px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 124px; right: 427px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 136px; right: 418.5px"
-        />
-
-        <!-- 작은 창문 -->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 61px; right: 438px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 61px; right: 450px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 49px; right: 412px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 49px; right: 426px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 49px; right: 440px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 49px; right: 454px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 49px; right: 468px"
-        />
-
-        <!--큰 창문 -->
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 91px; right: 447px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 79px; right: 447px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 79px; right: 468px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 79px; right: 489px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 67px; right: 468px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 67px; right: 489px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 55px; right: 489px"
-        />
-
-        <img
-          src="./window2.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 81px; right: 507px"
-        />
-
-        <!-- 작은 창문 -->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 93px; right: 495px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 93px; right: 508px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 105px; right: 495px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 105px; right: 508px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 117px; right: 503px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 129px; right: 503px"
-        />
-
-        <!-- 작은 창문 -->
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 87px; right: 528px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 75px; right: 528px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 63px; right: 515px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 63px; right: 527px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 63px; right: 539px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 51px; right: 515px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 51px; right: 527px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 51px; right: 539px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 51px; right: 551px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 39px; right: 515px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 39px; right: 527px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 39px; right: 539px"
-        />
-
-        <img
-          src="./window.png"
-          alt="창문 불빛"
-          class="window blinking"
-          style="bottom: 39px; right: 551px"
-        />
-      </div>
-
-      <div class="ground"></div>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>마음 돌탑 (Mind Stone) · 온라인 안식 공간</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #05070b;
+      color: #e2e8f0;
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    /* 캔버스 배경 (별빛, 달, 반딧불이, 지면) */
+    #worldCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* 상단 헤더 */
+    .top-bar {
+      position: absolute;
+      top: env(safe-area-inset-top, 20px);
+      left: 20px;
+      right: 20px;
+      z-index: 20;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      pointer-events: none;
+    }
+    .brand-pill {
+      pointer-events: auto;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 12px 18px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .brand-sub {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: #f59e0b;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .pulse-dot {
+      width: 6px;
+      height: 6px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #10b981;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+    .brand-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #f8fafc;
+      margin-top: 3px;
+    }
+    .brand-count {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-top: 2px;
+    }
+
+    .btn-chime {
+      pointer-events: auto;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f59e0b;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      transition: transform 0.15s;
+    }
+    .btn-chime:active {
+      transform: scale(0.92);
+    }
+
+    /* 다른 사람들의 떠다니는 생각들 */
+    .community-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .stone-bubble {
+      pointer-events: auto;
+      position: absolute;
+      background: rgba(22, 30, 46, 0.82);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      padding: 7px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: #e2e8f0;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      animation: gentleFloat 4s ease-in-out infinite alternate;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .stone-bubble:active {
+      transform: scale(0.95);
+      background: rgba(245, 158, 11, 0.3);
+      border-color: #f59e0b;
+      color: #fff;
+    }
+    @keyframes gentleFloat {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-8px); }
+    }
+
+    /* 하단 고정 인터랙션 바 (아이폰 사파리 100% 완벽 호환 입력창) */
+    .bottom-bar {
+      position: absolute;
+      bottom: env(safe-area-inset-bottom, 24px);
+      left: 0;
+      width: 100%;
+      padding: 0 16px 12px 16px;
+      z-index: 30;
+      display: flex;
+      justify-content: center;
+    }
+    .input-card {
+      width: 100%;
+      max-width: 500px;
+      background: rgba(13, 17, 28, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    }
+    .card-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .card-label strong {
+      color: #f8fafc;
+      font-weight: 600;
+    }
+    .input-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    /* 중요: iOS Safari 폰트 16px 미만 자동 줌 방지 및 user-select 강제 허용 */
+    #worryInput {
+      flex: 1;
+      height: 48px;
+      background: rgba(4, 6, 12, 0.7);
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      border-radius: 14px;
+      padding: 0 16px;
+      color: #ffffff !important;
+      font-size: 16px !important;
+      font-family: inherit;
+      outline: none;
+      -webkit-user-select: text !important;
+      user-select: text !important;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    #worryInput:focus {
+      border-color: #f59e0b;
+      background: rgba(4, 6, 12, 0.95);
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
+    }
+    #worryInput::placeholder {
+      color: #64748b;
+      font-size: 14px;
+    }
+    .btn-submit {
+      height: 48px;
+      padding: 0 20px;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0b0d13;
+      font-weight: 700;
+      font-size: 15px;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+      transition: transform 0.15s, opacity 0.2s;
+    }
+    .btn-submit:active {
+      transform: scale(0.95);
+      opacity: 0.9;
+    }
+
+    /* 완료 모달 (안식으로 화면 끄기) */
+    .finish-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(3, 4, 7, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 100;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      text-align: center;
+      animation: modalFadeIn 0.8s ease forwards;
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.96); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .candle-icon {
+      font-size: 52px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 20px rgba(245, 158, 11, 0.6));
+    }
+    .finish-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #f8fafc;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    .finish-desc {
+      font-size: 15px;
+      color: #94a3b8;
+      line-height: 1.8;
+      max-width: 340px;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+    .finish-tag {
+      font-size: 13px;
+      color: #f59e0b;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 8px 18px;
+      border-radius: 30px;
+      margin-bottom: 36px;
+    }
+    .btn-screen-off {
+      background: #1e293b;
+      border: 1px solid #475569;
+      color: #f1f5f9;
+      padding: 16px 36px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      transition: all 0.2s;
+    }
+    .btn-screen-off:active {
+      background: #334155;
+      transform: scale(0.96);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 인터랙티브 캔버스 -->
+  <canvas id="worldCanvas"></canvas>
+
+  <!-- 상단 상태 바 -->
+  <div class="top-bar">
+    <div class="brand-pill">
+      <div class="brand-sub"><span class="pulse-dot"></span> VIRTUAL SANCTUARY</div>
+      <div class="brand-title">마음 돌탑</div>
+      <div class="brand-count" id="countDisplay">고요히 머무는 이 42명 · 오늘 쌓인 마음 1,428개</div>
     </div>
-    <div class="container">
-      <div class="sky">
-        <div class="shooting-stars"></div>
+    <button class="btn-chime" id="btnSound" title="풍경소리 울리기">🔔</button>
+  </div>
+
+  <!-- 떠다니는 다른 청년들의 생각들 -->
+  <div class="community-layer" id="bubbleLayer"></div>
+
+  <!-- 하단 마음 입력 및 돌 얹기 독 -->
+  <div class="bottom-bar">
+    <div class="input-card">
+      <div class="card-label">
+        <span>오늘 밤 내려놓고 싶은 <strong>마음 한 줄</strong></span>
+        <span style="color:#f59e0b;">하루 딱 1개</span>
+      </div>
+      <div class="input-group">
+        <input type="text" id="worryInput" placeholder="예: 오늘 하루도 참 치열하게 버텼다. 이제 쉴래." maxlength="30" autocomplete="off">
+        <button class="btn-submit" id="btnPlace">
+          <span>🪨 돌 얹기</span>
+        </button>
       </div>
     </div>
-    <div class="space"></div>
-  </body>
+  </div>
+
+  <!-- 안식 완료 마침표 모달 -->
+  <div class="finish-modal" id="finishModal">
+    <div class="candle-icon">🕯️</div>
+    <h2 class="finish-title">오늘의 돌이 고요히 얹혔습니다.<br>수고 많으셨습니다.</h2>
+    <p class="finish-desc">
+      오늘 하루 짊어졌던 무거운 짐은 돌탑에 맡겨두었습니다.<br><br>
+      더 이상의 영상도, 끝없는 알고리즘도 없습니다.<br>
+      이제 스마트폰을 내려두고 온전한 안식으로 들어가세요.
+    </p>
+    <div class="finish-tag">🌙 오늘의 서비스가 종료되었습니다</div>
+    <button class="btn-screen-off" id="btnBlackout">스마트폰 화면 끄기</button>
+  </div>
+
+  <script>
+    // 캔버스 그래픽 엔진
+    const canvas = document.getElementById('worldCanvas');
+    const ctx = canvas.getContext('2d');
+    let W = canvas.width = window.innerWidth;
+    let H = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      W = canvas.width = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+      initElements();
+    });
+
+    const stars = [];
+    const fireflies = [];
+
+    // 돌탑 층별 데이터 (온라인 산사 스타일 부드러운 자연석)
+    const stones = [
+      { w: 165, h: 46, text: "취업과 진로의 불안", c1: "#3b4759", c2: "#182230" },
+      { w: 135, h: 40, text: "끝없는 과제와 조모임", c1: "#47576d", c2: "#1e2b3d" },
+      { w: 110, h: 36, text: "남들과 비교하며 지친 나", c1: "#546882", c2: "#26364d" },
+      { w: 85,  h: 32, text: "도파민 알고리즘 멈추기", c1: "#637a99", c2: "#2f425e" },
+      { w: 68,  h: 28, text: "나를 위한 온전한 쉼", c1: "#738eb2", c2: "#395073" }
+    ];
+
+    function initElements() {
+      stars.length = 0;
+      for (let i = 0; i < 70; i++) {
+        stars.push({
+          x: Math.random() * W,
+          y: Math.random() * (H * 0.65),
+          r: Math.random() * 1.5 + 0.5,
+          a: Math.random() * 0.8 + 0.2,
+          sp: Math.random() * 0.03 + 0.01
+        });
+      }
+
+      fireflies.length = 0;
+      for (let i = 0; i < 22; i++) {
+        fireflies.push({
+          x: Math.random() * W,
+          y: H * 0.4 + Math.random() * (H * 0.45),
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.4,
+          r: Math.random() * 2 + 1,
+          a: Math.random() * 0.6 + 0.2,
+          sp: Math.random() * 0.05 + 0.02
+        });
+      }
+    }
+    initElements();
+
+    // 맑은 사찰 종소리 (Web Audio API)
+    let audioCtx = null;
+    function playBell() {
+      try {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(528, audioCtx.currentTime); // 528Hz 사랑과 치유의 주파수
+        gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 3.0);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start();
+        osc.stop(audioCtx.currentTime + 3.0);
+      } catch (e) {}
+    }
+
+    document.getElementById('btnSound').addEventListener('click', () => {
+      playBell();
+      alert("은은한 쉼의 종소리가 울렸습니다 🔔");
+    });
+
+    // 다른 사람들의 생각 말풍선
+    const bubbleMsgs = [
+      "자취방에서 릴스 그만 보고 자야지",
+      "취업 불안하지만 오늘도 버텼다",
+      "엄마 전화 못 받아서 미안해",
+      "졸프 한 고비 넘겼다 다행이야",
+      "내일은 조금 더 편안하길"
+    ];
+    const bubbleLayer = document.getElementById('bubbleLayer');
+    bubbleMsgs.forEach((txt, i) => {
+      const b = document.createElement('div');
+      b.className = 'stone-bubble';
+      b.textContent = `🪨 "${txt}"`;
+      b.style.left = `${10 + (i % 2) * 55 + Math.random() * 10}%`;
+      b.style.top = `${25 + Math.floor(i / 2) * 16 + Math.random() * 6}%`;
+      b.style.animationDelay = `${i * 0.8}s`;
+      b.addEventListener('click', () => {
+        playBell();
+        alert(`익명의 청년이 탑에 남긴 마음:\n\n"${txt}"\n\n함께 위로를 보냈습니다 🕊️`);
+      });
+      bubbleLayer.appendChild(b);
+    });
+
+    // 렌더링 루프
+    let dropAnim = null;
+    function draw() {
+      const towerX = W / 2;
+      const towerBaseY = H * 0.72;
+
+      // 1. 배경 밤하늘
+      const bg = ctx.createLinearGradient(0, 0, 0, H);
+      bg.addColorStop(0, '#05070b');
+      bg.addColorStop(0.5, '#0b101c');
+      bg.addColorStop(1, '#161f30');
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, W, H);
+
+      // 2. 은은한 보름달
+      const mx = W * 0.82;
+      const my = H * 0.16;
+      const mg = ctx.createRadialGradient(mx, my, 8, mx, my, 100);
+      mg.addColorStop(0, 'rgba(255, 253, 240, 0.95)');
+      mg.addColorStop(0.3, 'rgba(245, 230, 180, 0.35)');
+      mg.addColorStop(0.8, 'rgba(245, 200, 100, 0.08)');
+      mg.addColorStop(1, 'transparent');
+      ctx.fillStyle = mg;
+      ctx.beginPath();
+      ctx.arc(mx, my, 100, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = '#fffdf0';
+      ctx.beginPath();
+      ctx.arc(mx, my, 26, 0, Math.PI * 2);
+      ctx.fill();
+
+      // 3. 반짝이는 별빛
+      stars.forEach(s => {
+        s.a += s.sp;
+        const alpha = 0.3 + Math.sin(s.a) * 0.4;
+        ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      // 4. 고즈넉한 지면
+      ctx.fillStyle = '#080c14';
+      ctx.beginPath();
+      ctx.moveTo(0, H * 0.76);
+      ctx.quadraticCurveTo(W * 0.5, H * 0.73, W, H * 0.78);
+      ctx.lineTo(W, H);
+      ctx.lineTo(0, H);
+      ctx.closePath();
+      ctx.fill();
+
+      // 5. 탑 받침석
+      ctx.fillStyle = '#1e293b';
+      ctx.beginPath();
+      ctx.ellipse(towerX, towerBaseY + 16, 105, 14, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = '#334155';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // 6. 돌탑 쌓기
+      let curY = towerBaseY + 8;
+      stones.forEach((st, idx) => {
+        curY -= (st.h * 0.76);
+        const rx = st.w / 2;
+        const ry = st.h / 2;
+
+        ctx.save();
+        ctx.translate(towerX, curY);
+
+        ctx.shadowColor = 'rgba(0, 0, 0, 0.55)';
+        ctx.shadowBlur = 12;
+        ctx.shadowOffsetY = 5;
+
+        const sg = ctx.createLinearGradient(-rx, -ry, rx, ry);
+        sg.addColorStop(0, st.c1);
+        sg.addColorStop(1, st.c2);
+        ctx.fillStyle = sg;
+
+        ctx.beginPath();
+        ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.shadowColor = 'transparent';
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.18)';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+
+        ctx.fillStyle = 'rgba(241, 245, 249, 0.88)';
+        ctx.font = '11px "Noto Serif KR", serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(st.text, 0, 0);
+
+        ctx.restore();
+      });
+
+      // 떨어지는 새 조약돌
+      if (dropAnim) {
+        dropAnim.t += 0.04;
+        const p = Math.min(1, dropAnim.t);
+        const ease = 1 - Math.pow(1 - p, 3);
+        const dy = dropAnim.sy + (dropAnim.ey - dropAnim.sy) * ease;
+
+        ctx.save();
+        ctx.translate(towerX, dy);
+
+        ctx.shadowColor = 'rgba(245, 158, 11, 0.7)';
+        ctx.shadowBlur = 20;
+
+        const dg = ctx.createLinearGradient(-30, -15, 30, 15);
+        dg.addColorStop(0, '#fbbf24');
+        dg.addColorStop(1, '#b45309');
+        ctx.fillStyle = dg;
+
+        ctx.beginPath();
+        ctx.ellipse(0, 0, 32, 16, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = '#05070b';
+        ctx.font = 'bold 10px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(dropAnim.text, 0, 0);
+
+        ctx.restore();
+
+        if (p >= 1) {
+          stones.push({
+            w: 64,
+            h: 26,
+            text: dropAnim.text,
+            c1: "#f59e0b",
+            c2: "#b45309"
+          });
+          dropAnim = null;
+          playBell();
+
+          setTimeout(() => {
+            document.getElementById('finishModal').style.display = 'flex';
+          }, 1000);
+        }
+      }
+
+      // 7. 반딧불이
+      fireflies.forEach(f => {
+        f.x += f.vx;
+        f.y += f.vy;
+        if (f.x < 0) f.x = W;
+        if (f.x > W) f.x = 0;
+        if (f.y < H * 0.4) f.vy *= -1;
+        if (f.y > H * 0.82) f.vy *= -1;
+
+        f.a += f.sp;
+        const alpha = 0.2 + Math.abs(Math.sin(f.a)) * 0.6;
+        ctx.fillStyle = `rgba(245, 158, 11, ${alpha})`;
+        ctx.beginPath();
+        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      requestAnimationFrame(draw);
+    }
+    draw();
+
+    // 돌 얹기 클릭 이벤트
+    const btnPlace = document.getElementById('btnPlace');
+    const worryInput = document.getElementById('worryInput');
+    const countDisplay = document.getElementById('countDisplay');
+
+    
+    worryInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        btnPlace.click();
+      }
+    });
+
+    btnPlace.addEventListener('click', () => {
+      const val = worryInput.value.trim() || '오늘 하루도 참 고생 많았다';
+      if (dropAnim) return;
+
+      playBell();
+
+      let topY = (H * 0.72) + 8;
+      stones.forEach(s => { topY -= (s.h * 0.76); });
+
+      dropAnim = {
+        sy: H * 0.15,
+        ey: topY - 20,
+        t: 0,
+        text: val
+      };
+
+      worryInput.value = '';
+      worryInput.blur();
+      btnPlace.disabled = true;
+      btnPlace.style.opacity = '0.5';
+
+      countDisplay.textContent = '고요히 머무는 이 42명 · 오늘 쌓인 마음 1,429개 (+1)';
+    });
+
+    // 화면 끄기
+    document.getElementById('btnBlackout').addEventListener('click', () => {
+      document.body.innerHTML = `
+        <div style="width:100vw; height:100vh; background:#000; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:24px;">
+          <div style="font-size:36px; margin-bottom:18px;">🌙</div>
+          <div style="font-size:20px; color:#f1f5f9; font-weight:600; margin-bottom:10px; font-family:'Noto Serif KR',serif;">화면이 꺼졌습니다.</div>
+          <div style="font-size:14px; color:#64748b; line-height:1.7;">스마트폰 전원 버튼을 누르고<br>오늘 밤은 깊고 편안한 안식 속으로 들어가세요.</div>
+        </div>
+      `;
+    });
+  </script>
+</body>
 </html>
